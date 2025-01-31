@@ -71,24 +71,25 @@ function HomeLayout({ children }) {
               <Link to="/about">About Us</Link>
             </li>
             {!isLoggedIn && (
-              <li className="absolute  bottom-4 w-[90%]">
-                <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full text-inherit">
+              <li className="absolute bottom-4 w-[90%] px-4">
+                <div className="w-full flex flex-col md:flex-row space-y-4 md:space-x-4 md:space-y-0 items-center justify-center">
+                  <button className="px-6 py-3 font-semibold rounded-md w-full md:w-1/2 text-black bg-yellow-500 hover:bg-yellow-400 transition duration-300 ease-in-out">
                     <Link to="/login">Login</Link>
                   </button>
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full text-inherit">
-                    <Link to="/login">Signup</Link>
+                  <button className="px-6 py-3 font-semibold rounded-md w-full md:w-1/2 text-yellow-600 bg-white border border-yellow-500 hover:bg-yellow-50 transition duration-300 ease-in-out">
+                    <Link to="/signup">Signup</Link>
                   </button>
                 </div>
               </li>
             )}
+
             {isLoggedIn && (
-              <li className="absolute bottom-4 w-[90%]">
-                <div className="w-full flex items-center justify-center">
-                  <button className="btn-primary px-4 py-1 font-semibold rounded-md w-full">
+              <li className="absolute bottom-4 w-[90%] px-4">
+                <div className="w-full flex flex-col md:flex-row space-y-4 md:space-x-4 md:space-y-0 items-center justify-center">
+                  <button className="px-6 py-3 font-semibold rounded-md w-full md:w-1/2 text-white bg-yellow-600 hover:bg-yellow-500 transition duration-300 ease-in-out">
                     <Link to="/user/profile">Profile</Link>
                   </button>
-                  <button className="btn-secondary px-4 py-1 font-semibold rounded-md w-full">
+                  <button className="px-6 py-3 font-semibold rounded-md w-full md:w-1/2 text-yellow-600 bg-white border border-yellow-600 hover:bg-yellow-50 transition duration-300 ease-in-out">
                     <Link onClick={handleLogout}>Logout</Link>
                   </button>
                 </div>
